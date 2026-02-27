@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Drum Kit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <style>
+        body { font-family: 'Arvo', serif; }
+        .pressed { transform: scale(0.95); box-shadow: 0 0 20px #fbbf24; }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col items-center justify-center text-white">
+
+    <h1 id="title" class="text-6xl md:text-8xl font-bold text-yellow-400 mb-12 drop-shadow-lg">
+        Drum <span class="animate-bounce inline-block">🥁</span> Kit
+    </h1>
+
+    <div class="set grid grid-cols-3 md:grid-cols-7 gap-4 p-4">
+        <button class="w drum w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl text-4xl font-bold hover:bg-yellow-500 transition-all duration-100 flex items-center justify-center">w</button>
+        <button class="a drum w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl text-4xl font-bold hover:bg-yellow-500 transition-all duration-100 flex items-center justify-center">a</button>
+        <button class="s drum w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl text-4xl font-bold hover:bg-yellow-500 transition-all duration-100 flex items-center justify-center">s</button>
+        <button class="d drum w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl text-4xl font-bold hover:bg-yellow-500 transition-all duration-100 flex items-center justify-center">d</button>
+        <button class="j drum w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl text-4xl font-bold hover:bg-yellow-500 transition-all duration-100 flex items-center justify-center">j</button>
+        <button class="k drum w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl text-4xl font-bold hover:bg-yellow-500 transition-all duration-100 flex items-center justify-center">k</button>
+        <button class="l drum w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl text-4xl font-bold hover:bg-yellow-500 transition-all duration-100 flex items-center justify-center">l</button>
+    </div>
+
+    <footer class="mt-20 text-slate-400">
+        Made with <span class="text-red-500">❤</span> in India
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
