@@ -1,16 +1,16 @@
-<p align="center">
+<img width="538" height="527" alt="{8AC1919F-188A-49AC-A91C-306C2CE1B0AB}" src="https://github.com/user-attachments/assets/e30b1cf2-e22d-43ba-a624-88e8a0eb8665" /><img width="1920" height="1080" alt="{37C2DDA4-2DD9-484B-8BDE-EF65E6DE0051}" src="https://github.com/user-attachments/assets/18073aee-3b13-4be9-a78b-bc4d7d471ba1" /><p align="center">
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# HerSpace🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: Innovix
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1:Aswana Ashok : College of Engineering Thalassery
+- Member 2:Aparna Sajeevan : College of Engineering Thalassery
 
 ### Hosted Project Link
 [mention your project hosted link here]
@@ -94,10 +94,7 @@ List the key features of your project:
 
 #### Diagrams
 
-**System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
 
 **Application Workflow:**
 
