@@ -1,4 +1,4 @@
-# HerSpace 🌸
+># HerSpace 🌸
 
 A comprehensive women's wellness and mental health platform designed to empower women through mood tracking, journaling, financial management, career development, and mindfulness activities.
 
@@ -646,35 +646,33 @@ This video showcases all key features of the HerSpace platform in action.
 ### Platform Features Gallery
 
 Here are screenshots showcasing HerSpace's key features:
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 101904" src="https://github.com/user-attachments/assets/3adbf007-3656-4b05-abd3-f2768bd21e3c" />
+<img width="1920" height="1020" alt="landingpage2" src="https://github.com/user-attachments/assets/fc410013-fa6d-4d03-9f7b-bcdf704e00e0" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 101846" src="https://github.com/user-attachments/assets/dcbb3056-b78c-4adc-8e3a-f94095be82d0" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 101904" src="https://github.com/user-attachments/assets/bf7ff9b7-0a90-4de2-8a0b-ac987cbb034a" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 101945" src="https://github.com/user-attachments/assets/ce8ba029-31d6-4335-b1b9-fb05090bcece" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102035" src="https://github.com/user-attachments/assets/81b51401-400e-4550-a904-a635fda9e2c9" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102138" src="https://github.com/user-attachments/assets/c376dee4-85b9-4f54-980d-2d8454a90cce" />
 
-#### Landing & Authentication
-- [Landing Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101808.png)
-- [Login Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101820.png)
-- [Sign Up Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101846.png)
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102230" src="https://github.com/user-attachments/assets/c720c6e6-c1d3-4891-867c-ee332af8a859" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102259" src="https://github.com/user-attachments/assets/2abe1f7d-7f84-4f9c-987a-fe2142a56e03" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102318" src="https://github.com/user-attachments/assets/d448374b-543f-4a43-a04a-e45ec8ef01aa" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102333" src="https://github.com/user-attachments/assets/9a96c7eb-59eb-4bf9-9c35-8889f8eaeeba" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102355" src="https://github.com/user-attachments/assets/fee0fca6-118a-447d-9c9b-3a2e9ccf02ad" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102408" src="https://github.com/user-attachments/assets/42aa9e7d-87e1-44ec-8622-326af883a701" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102428" src="https://github.com/user-attachments/assets/b1008fa1-813f-45b6-9286-e5e66159b7ff" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102443" src="https://github.com/user-attachments/assets/a2b697c3-2da2-49eb-a492-66fddc4956be" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102505" src="https://github.com/user-attachments/assets/5b0f9bc1-26b8-4993-845f-eb39129455dc" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102550" src="https://github.com/user-attachments/assets/b84fdba4-0132-4537-848c-ded9af21740b" />
 
-#### Dashboard & Mood Tracking
-- [Main Dashboard](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101904.png)
-- [Mood Entry](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101945.png)
-- [Mood Selector](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102019.png)
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102019" src="https://github.com/user-attachments/assets/97b22d37-87d0-4fb7-8086-f71663d53037" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 102610" src="https://github.com/user-attachments/assets/322b2120-d629-40e6-9e07-d52ac340be51" />
 
-#### Core Features
-- [Journal Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102035.png)
-- [Financial Dashboard](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102049.png)
-- [Goals Tracking](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102110.png)
+## Diagrams
 
-#### Wellness Tools
-- [Affirmations Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102122.png)
-- [Music Player](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102138.png)
-- [Doodle Canvas](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102230.png)
+![dua](https://github.com/user-attachments/assets/88d72c3c-51d2-4894-aba4-78cb6105641b)
 
-#### Additional Features
-- [Drums Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102259.png)
-- [Meditation Guide](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102318.png)
-- [Career Resources](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102333.png)
-- [Emergency Contacts](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102355.png)
-- [Mobile Responsive View](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20102408.png)
 
----
 
 ## Project Statistics
 
@@ -699,4 +697,13 @@ Made with ❤️ by **Innovix** at **College of Engineering Thalassery**
 **Version:** 1.0.0
 
 *For the latest updates, documentation, and contributions, visit our [GitHub Repository](https://github.com/yourusername/herspace)*
+
+
+
+
+
+
+
+
+
 
