@@ -1,0 +1,36 @@
+Core Dependencies (Required):
+Django 6.0.2 - Main web framework
+asgiref 3.11.1 - ASGI compatibility layer
+sqlparse 0.5.5 - SQL parsing for Django
+tzdata 2025.3 - Timezone database
+Optional Packages (Commented for Future Use):
+Frontend & Styling:
+
+Tailwind CSS (CDN-based, no installation needed)
+Google Fonts (CDN-based, no installation needed)
+Chart.js (CDN-based, no installation needed)
+Enhanced Features:
+
+django-cors-headers - CORS support
+python-decouple - Environment variables
+pillow - Image processing
+djangorestframework - REST API development
+celery - Background tasks
+redis - Caching
+Database:
+
+SQLite3 (already included with Python)
+psycopg2-binary (for PostgreSQL in production)
+Development Tools:
+
+django-debug-toolbar - Debugging
+pytest & pytest-django - Testing
+Production:
+
+gunicorn - Production WSGI server
+whitenoise - Static file serving
+Code Quality:
+
+flake8 - Linting
+black - Code formatting
+isort - Import sorting

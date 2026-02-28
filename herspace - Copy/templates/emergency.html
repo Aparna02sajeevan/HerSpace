@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+
+    .contact-card {
+        transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-4px);
+    }
+</style>
+
+<div class="max-w-4xl mx-auto">
+    
+    <!-- Header -->
+    <div class="fade-in mb-12">
+        <div class="flex items-center justify-between gap-4 mb-6">
+            <h1 class="text-5xl font-bold text-red-600" style="font-family: 'Playfair Display', serif;">
+                🚨 Emergency Contacts
+            </h1>
+            <p class="text-lg text-gray-600">Keep your support system close</p>
+        </div>
+        <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 rounded-full"></div>
+    </div>
+
+    <!-- Important Notice -->
+    <div class="fade-in card rounded-2xl p-6 mb-8 border-l-4 border-red-500 bg-red-50">
+        <p class="text-red-800 font-semibold">
+            ⚠️ If you're in immediate danger, please call emergency services (911 or your local emergency number)
+        </p>
+    </div>
+
+    <!-- Add Contact Form -->
+    <div class="fade-in card rounded-2xl p-8 md:p-12 shadow-lg mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">➕ Add Emergency Contact</h2>
+        
+        <form method="POST" class="space-y-6">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Contact Name</label>
+                    <input type="text" name="name" placeholder="e.g., Mom, Best Friend, Therapist" required
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500/30 focus:border-red-500 bg-gray-50 focus:bg-white transition-all">
+                    {% if form.name.errors %}
+                        <p class="text-red-500 text-sm mt-1">{{ form.name.errors }}</p>
+                    {% endif %}
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                    <input type="tel" name="phone" placeholder="+1 (555) 000-0000" required
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500/30 focus:border-red-500 bg-gray-50 focus:bg-white transition-all">
+                    {% if form.phone.errors %}
+                        <p class="text-red-500 text-sm mt-1">{{ form.phone.errors }}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-semibold rounded-xl shadow-lg shadow-red-500/30 transition-all transform hover:scale-105 active:scale-95">
+                Save Contact
+            </button>
+        </form>
+    </div>
+
+    <!-- Contacts List -->
+    <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Contacts</h2>
+        
+        {% if contacts %}
+            <div class="grid md:grid-cols-2 gap-6">
+                {% for contact in contacts %}
+                <div class="contact-card card rounded-2xl p-6 shadow-lg border border-gray-200 hover:border-red-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-900">{{ contact.name }}</h3>
+                        <span class="text-2xl">👤</span>
+                    </div>
+                    
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-600 mb-2">Phone</p>
+                        <a href="tel:{{ contact.phone }}" class="text-lg font-bold text-red-600 hover:text-red-700 transition-colors">
+                            {{ contact.phone }}
+                        </a>
+                    </div>
+
+                    <div class="mt-4 flex gap-2">
+                        <a href="tel:{{ contact.phone }}" class="flex-1 py-2 px-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-all text-center">
+                            📞 Call
+                        </a>
+                        <a href="sms:{{ contact.phone }}" class="flex-1 py-2 px-4 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold rounded-lg transition-all text-center">
+                            💬 Text
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="card rounded-2xl p-12 text-center shadow-lg">
+                <div class="text-5xl mb-4">👥</div>
+                <p class="text-xl text-gray-600 mb-4">No emergency contacts yet. Add someone you trust.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Help Resources -->
+    <div class="fade-in mt-12 p-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">💜 Help Resources</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+            <div>
+                <p class="font-semibold text-gray-800 mb-2">National Crisis Line</p>
+                <p class="text-lg font-bold text-purple-600">988</p>
+            </div>
+            <div>
+                <p class="font-semibold text-gray-800 mb-2">Crisis Text Line</p>
+                <p class="text-lg font-bold text-purple-600">Text HOME to 741741</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

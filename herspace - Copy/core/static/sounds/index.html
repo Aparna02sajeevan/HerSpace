@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindfulMe - Your Daily Wellness Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1));
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .quote-section {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .quote-text::before,
+        .quote-text::after {
+            content: '"';
+            position: absolute;
+            font-size: 4rem;
+            color: rgba(52, 152, 219, 0.3);
+            line-height: 1;
+        }
+
+        .quote-text::before {
+            left: -1rem;
+            top: -1rem;
+        }
+
+        .quote-text::after {
+            right: -1rem;
+            bottom: -2rem;
+        }
+
+        .quote-author {
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+        }
+
+        .benefits-section {
+            margin: 4rem 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+        }
+
+        .benefit-content h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-content p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mood-form.html">Mood Check</a></li>
+            <li><a href="med.html">Meditate</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="drums.html">Drums</a></li>
+            <li><a href="quotes.html">Quotes</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero-section fade-in">
+            <h1 class="hero-title">MindfulMe</h1>
+            <p class="hero-subtitle">Your personal sanctuary for mindfulness, meditation, and emotional well-being. Start your journey to inner peace today.</p>
+            <a href="mood-form.html" class="cta-button">Begin Your Journey</a>
+        </section>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🎯</div>
+                <h2 class="feature-title">Mood Tracking</h2>
+                <p class="feature-description">Track your emotional well-being and get personalized recommendations based on your mood.</p>
+                <a href="mood-form.html" class="cta-button">Check Mood</a>
+            </div>
+
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🧘</div>
+                <h2 class="feature-title">Guided Meditation</h2>
+                <p class="feature-description">Find peace with our collection of guided meditations and breathing exercises.</p>
+                <a href="med.html" class="cta-button">Start Meditating</a>
+            </div>
+
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🎵</div>
+                <h2 class="feature-title">Calming Music</h2>
+                <p class="feature-description">Immerse yourself in soothing melodies and natural sounds for relaxation.</p>
+                <a href="music.html" class="cta-button">Listen Now</a>
+            </div>
+        </div>
+
+        <section class="quote-section fade-in">
+            <p class="quote-text">Mindfulness is the key to unlocking a life of peace, purpose, and presence.</p>
+            <p class="quote-author">Daily Inspiration</p>
+        </section>
+
+        <section class="benefits-section">
+            <div class="benefit-item fade-in">
+                <div class="benefit-icon">🌟</div>
+                <div class="benefit-content">
+                    <h3>Reduce Stress</h3>
+                    <p>Regular meditation and mindfulness practices help lower stress levels and promote emotional balance.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item fade-in">
+                <div class="benefit-icon">💪</div>
+                <div class="benefit-content">
+                    <h3>Build Resilience</h3>
+                    <p>Develop mental strength and emotional resilience through consistent practice and self-reflection.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item fade-in">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-content">
+                    <h3>Improve Focus</h3>
+                    <p>Enhance your concentration and mental clarity through guided meditation sessions.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const fadeElems = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        fadeElems.forEach(elem => {
+            elem.style.opacity = '0';
+            elem.style.transform = 'translateY(20px)';
+            elem.style.transition = 'all 0.6s ease-out';
+            observer.observe(elem);
+        });
+    </script>
+</body>
+</html>

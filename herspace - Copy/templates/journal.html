@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Journal | HerSpace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --paper-color: #fcfaf2;
+            --ink-color: #2c3e50;
+            --line-color: #e8e3d5;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f9f5ff 0%, #fef3f8 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .diary-font { font-family: 'Crimson Pro', serif; }
+
+        /* Floating Shapes */
+        .shape {
+            position: fixed;
+            opacity: 0.15;
+            animation: float 20s infinite ease-in-out;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #a78bfa, #c084fc);
+            border-radius: 50%;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(20px, 20px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        .slide-in { animation: slideIn 0.8s ease-out; }
+
+        /* Lined Paper Effect */
+        .lined-paper {
+            background-color: var(--paper-color);
+            background-image: linear-gradient(var(--line-color) 1px, transparent 1px);
+            background-size: 100% 2rem;
+            line-height: 2rem;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 60px rgba(106, 90, 205, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .entry-card { 
+            animation: slideIn 0.6s ease-out;
+            border-left: 4px solid #6a5acd;
+            transition: all 0.3s ease;
+        }
+
+        .entry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(106, 90, 205, 0.2);
+        }
+
+        button {
+            transition: all 0.3s ease;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen py-12 px-4 relative z-10">
+
+    <!-- Floating Shapes -->
+    <div class="shape shape-1"></div>
+
+    <div class="max-w-4xl mx-auto relative z-20">
+        
+        <!-- Header -->
+        <header class="fade-in text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-3" style="font-family: 'Playfair Display', serif;">
+                📔 Personal Journal
+            </h1>
+            <p class="text-lg text-gray-600">Your sacred space for reflection and self-discovery</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mx-auto mt-4"></div>
+        </header>
+
+        <!-- New Entry Form -->
+        <div class="fade-in glass-card rounded-2xl shadow-lg overflow-hidden mb-12">
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 flex justify-between items-center">
+                <span class="font-bold text-lg">✍️ New Entry</span>
+                <span id="liveWordCount" class="text-sm font-semibold">0 Words</span>
+            </div>
+            
+            <form id="journalForm" class="p-8 md:p-12 space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-3">Entry Title</label>
+                    <input type="text" id="title" placeholder="What's on your mind today?" 
+                        class="w-full bg-gray-50 diary-font text-2xl font-semibold text-gray-900 border-2 border-gray-200 focus:border-purple-500 focus:ring-purple-500/30 focus:outline-none rounded-lg px-4 py-3 transition-all">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-3">Your Thoughts</label>
+                    <textarea id="content" rows="10" placeholder="Let it all out. This is your safe space..." 
+                        oninput="updateWordCount(this)"
+                        class="w-full bg-gray-50 diary-font text-lg text-gray-800 border-2 border-gray-200 focus:border-purple-500 focus:ring-purple-500/30 focus:outline-none rounded-lg px-4 py-3 resize-none transition-all lined-paper">
+                    </textarea>
+                </div>
+
+                <div class="flex justify-end">
+                    <button type="submit" 
+                        class="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg shadow-lg shadow-purple-500/30 transition-all transform hover:scale-105">
+                        💾 Save Entry
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Past Entries Section -->
+        <div class="mb-8">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-[2px] bg-gradient-to-r from-purple-600 to-transparent flex-1"></div>
+                <h3 class="diary-font italic text-2xl text-gray-800 font-semibold">Your Stories</h3>
+                <div class="h-[2px] bg-gradient-to-l from-purple-600 to-transparent flex-1"></div>
+            </div>
+
+            <div id="entries" class="space-y-6">
+                <div class="text-center py-12">
+                    <p class="text-gray-400 italic text-lg">The pages are waiting for your first entry...</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button onclick="clearJournal()" 
+                    class="inline-block text-sm font-bold text-gray-400 hover:text-red-500 uppercase tracking-widest transition px-4 py-2 border border-gray-300 hover:border-red-500 rounded-lg">
+                    🗑️ Clear All Entries
+                </button>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="text-center mt-12">
+            <a href="{% url 'dashboard' %}" class="text-purple-600 hover:text-purple-700 font-semibold">← Back to Dashboard</a>
+        </div>
+
+    </div>
+
+    <script>
+        const form = document.getElementById("journalForm");
+        const entriesDiv = document.getElementById("entries");
+
+        let entries = JSON.parse(localStorage.getItem("myJournalEntries")) || [];
+        displayEntries();
+
+        function updateWordCount(textarea) {
+            const count = textarea.value.trim() ? textarea.value.trim().split(/\s+/).length : 0;
+            document.getElementById('liveWordCount').innerText = `${count} Words`;
+        }
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const title = document.getElementById("title").value.trim();
+            const content = document.getElementById("content").value.trim();
+            
+            if (!title || !content) {
+                alert("Please fill in both title and content");
+                return;
+            }
+
+            const date = new Date().toLocaleDateString('en-US', { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            });
+
+            const entry = {
+                id: Date.now(),
+                title,
+                content,
+                date
+            };
+
+            entries.unshift(entry);
+            saveToStorage();
+            displayEntries();
+            form.reset();
+            document.getElementById('liveWordCount').innerText = "0 Words";
+        });
+
+        function displayEntries() {
+            entriesDiv.innerHTML = "";
+
+            if (entries.length === 0) {
+                entriesDiv.innerHTML = '<div class="text-center py-12"><p class="text-gray-400 italic text-lg">The pages are waiting for your first entry...</p></div>';
+                return;
+            }
+
+            entries.forEach((entry, index) => {
+                const article = document.createElement("article");
+                article.classList.add("entry-card", "glass-card", "p-6", "md:p-8", "rounded-xl", "shadow-lg");
+                article.style.animationDelay = `${index * 0.1}s`;
+
+                article.innerHTML = `
+                    <div class="flex justify-between items-start gap-4 mb-4">
+                        <div class="flex-1">
+                            <h4 class="diary-font font-bold text-gray-900 text-2xl">${escapeHtml(entry.title)}</h4>
+                            <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mt-1">📅 ${entry.date}</p>
+                        </div>
+                        <button onclick="deleteEntry(${entry.id})" 
+                            class="flex-shrink-0 p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all" title="Delete entry">
+                            🗑️
+                        </button>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4 mt-4">
+                        <p class="diary-font text-gray-700 text-lg leading-8 whitespace-pre-wrap opacity-90">${escapeHtml(entry.content)}</p>
+                    </div>
+                `;
+
+                entriesDiv.appendChild(article);
+            });
+        }
+
+        function deleteEntry(id) {
+            if(confirm("Delete this entry? This cannot be undone.")) {
+                entries = entries.filter(e => e.id !== id);
+                saveToStorage();
+                displayEntries();
+            }
+        }
+
+        function clearJournal() {
+            if (confirm("🚨 This will permanently delete ALL entries. Are you absolutely sure?")) {
+                entries = [];
+                saveToStorage();
+                displayEntries();
+            }
+        }
+
+        function saveToStorage() {
+            localStorage.setItem("myJournalEntries", JSON.stringify(entries));
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+
+</body>
+</html>

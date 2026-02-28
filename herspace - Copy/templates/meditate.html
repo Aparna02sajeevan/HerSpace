@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Space | Breathing Exercise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #0f172a;
+            overflow-x: hidden;
+        }
+        
+        .serif { font-family: 'Playfair Display', serif; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .breathing-circle { 
+            transition: all 4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.2);
+        }
+
+        .visual-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.5; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(0.95); opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen flex items-center justify-center">
+
+    <div class="max-w-md w-full p-6 glass rounded-[3rem] flex flex-col items-center justify-center">
+
+        <div class="relative w-72 h-72 mb-10 flex items-center justify-center">
+            <svg class="absolute inset-0 w-full h-full -rotate-90">
+                <circle cx="144" cy="144" r="135" stroke="currentColor" stroke-width="2" fill="transparent" class="text-white/5" />
+                <circle id="movingCircle" cx="144" cy="144" r="135" stroke="currentColor" stroke-width="6" fill="transparent" stroke-dasharray="848" stroke-dashoffset="848" class="text-blue-400 transition-all duration-1000 linear" />
+            </svg>
+            <div id="visualCircle" class="w-32 h-32 rounded-full bg-blue-500/20 border border-blue-400/30 breathing-circle"></div>
+        </div>
+
+        <h2 id="instruct" class="serif text-4xl italic text-white mb-2">Ready?</h2>
+        <p id="timer" class="text-blue-400 font-bold text-2xl mb-8 tracking-widest">00</p>
+
+        <div class="flex gap-4">
+            <button id="startBtn" class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full transition-all active:scale-95 shadow-xl shadow-blue-900/40 font-semibold">Start 4-7-8 Breath</button>
+            <button onclick="location.reload()" class="px-8 py-4 bg-white/5 hover:bg-white/10 text-white rounded-full border border-white/10 transition">Reset</button>
+        </div>
+
+    </div>
+
+<script>
+    const movingCircle = document.getElementById('movingCircle');
+    const visualCircle = document.getElementById('visualCircle');
+    const instruct = document.getElementById('instruct');
+    const timerDisplay = document.getElementById('timer');
+    const startBtn = document.getElementById('startBtn');
+
+    let isRunning = false;
+
+    function updatePhase(txt, duration, scale, offset, color) {
+        instruct.innerText = txt;
+        visualCircle.style.transform = scale;
+        visualCircle.style.transitionDuration = `${duration}s`;
+        
+        movingCircle.style.strokeDashoffset = offset;
+        movingCircle.style.transitionDuration = `${duration}s`;
+        movingCircle.setAttribute('class', color + ' transition-all linear');
+
+        let count = duration;
+        timerDisplay.innerText = count < 10 ? `0${count}` : count;
+        const interval = setInterval(() => {
+            count--;
+            timerDisplay.innerText = count < 10 ? `0${count}` : count;
+            if(count <= 0 || !isRunning) clearInterval(interval);
+        }, 1000);
+    }
+
+    function runCycle() {
+        if(!isRunning) return;
+
+        updatePhase('Inhale', 4, 'scale(1.8)', '0', 'text-blue-400');
+        
+        setTimeout(() => {
+            if(!isRunning) return;
+            updatePhase('Hold', 7, 'scale(1.8)', '848', 'text-emerald-400');
+            setTimeout(() => {
+                if(!isRunning) return;
+                updatePhase('Exhale', 8, 'scale(1)', '0', 'text-slate-400');
+                setTimeout(runCycle, 8000);
+            }, 7000);
+        }, 4000);
+    }
+
+    startBtn.onclick = () => {
+        isRunning = !isRunning;
+        startBtn.innerText = isRunning ? "Pause Session" : "Start 4-7-8 Breath";
+        if(isRunning) {
+            visualCircle.classList.add('visual-pulse');
+            runCycle();
+        } else {
+            location.reload();
+        }
+    };
+</script>
+</body>
+</html>

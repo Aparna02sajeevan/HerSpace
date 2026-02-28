@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Power-Up | HerSpace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f9f5ff 0%, #fef3f8 100%);
+        }
+        
+        .section { 
+            animation: fadeIn 0.8s ease-out;
+            transition: all 0.4s ease; 
+        }
+        .hidden { display: none; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 60px rgba(106, 90, 205, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 25px 70px rgba(106, 90, 205, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: #6a5acd !important;
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body class="pb-10 pt-6">
+
+    <!-- Header -->
+    <header class="fade-in bg-gradient-to-r from-purple-600 via-purple-700 to-fuchsia-600 text-white py-16 px-6 text-center shadow-lg mb-12 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
+        
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">🚀 Career Powerup</h1>
+            <p class="text-lg text-purple-100">Skill • Support • Success for Women in Tech</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="flex flex-wrap justify-center gap-3 mb-12 px-4 sticky top-0 z-40 bg-white/80 backdropfilter backdrop-blur-md rounded-full py-4 px-6 mx-auto max-w-fit">
+        <button onclick="showSection('home')" class="nav-link px-4 py-2 rounded-full border-2 border-purple-600 text-purple-700 hover:bg-purple-700 hover:text-white transition shadow-sm active">Home</button>
+        <button onclick="showSection('learning')" class="nav-link px-4 py-2 rounded-full border-2 border-purple-600 text-purple-700 hover:bg-purple-700 hover:text-white transition shadow-sm">Learning</button>
+        <button onclick="showSection('jobs')" class="nav-link px-4 py-2 rounded-full border-2 border-purple-600 text-purple-700 hover:bg-purple-700 hover:text-white transition shadow-sm">Jobs</button>
+        <button onclick="showSection('resume')" class="nav-link px-4 py-2 rounded-full border-2 border-purple-600 text-purple-700 hover:bg-purple-700 hover:text-white transition shadow-sm">Resume</button>
+        <button onclick="showSection('mock')" class="nav-link px-4 py-2 rounded-full border-2 border-purple-600 text-purple-700 hover:bg-purple-700 hover:text-white transition shadow-sm">Mock</button>
+        <button onclick="showSection('contact')" class="nav-link px-4 py-2 rounded-full border-2 border-purple-600 text-purple-700 hover:bg-purple-700 hover:text-white transition shadow-sm">Contact</button>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4">
+
+        <!-- Home Section -->
+        <section id="home" class="section glass-card p-8 md:p-12 rounded-2xl shadow-lg mb-8">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900" style="font-family: 'Playfair Display', serif;">Welcome to Your Growth Hub</h2>
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">This platform is designed to bridge the gender gap in technology by providing resources, career tools, and opportunities for growth.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                    <span class="text-2xl mb-2 block">✅</span>
+                    <p class="font-semibold text-gray-800">Industry-Ready Skill Building</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                    <span class="text-2xl mb-2 block">🤝</span>
+                    <p class="font-semibold text-gray-800">Direct Career Networking</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                    <span class="text-2xl mb-2 block">📚</span>
+                    <p class="font-semibold text-gray-800">Verified Resource Kits</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                    <span class="text-2xl mb-2 block">👥</span>
+                    <p class="font-semibold text-gray-800">Community Support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Section -->
+        <section id="learning" class="section hidden">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900" style="font-family: 'Playfair Display', serif;">📚 Premium Learning Platforms</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-8 rounded-2xl shadow-lg border-l-4 border-blue-600 hover:shadow-xl">
+                    <span class="text-5xl mb-4 block">🔗</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">LinkedIn Learning</h3>
+                    <p class="text-gray-700 mb-6">Master AI, Coding, and Leadership from industry experts around the world.</p>
+                    <a href="https://www.linkedin.com/learning/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">Explore Courses →</a>
+                </div>
+                <div class="glass-card p-8 rounded-2xl shadow-lg border-l-4 border-purple-600 hover:shadow-xl">
+                    <span class="text-5xl mb-4 block">🎓</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Coursera</h3>
+                    <p class="text-gray-700 mb-6">Get certified by  world-class universities and tech companies to boost your resume.</p>
+                    <a href="https://www.coursera.org" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">Start Learning →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs" class="section hidden glass-card p-8 md:p-12 rounded-2xl shadow-lg">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900" style="font-family: 'Playfair Display', serif;">🎯 Find Your Next Role</h2>
+            <p class="text-gray-700 mb-8 text-lg">Search for jobs on LinkedIn tailored to your expertise.</p>
+            
+            <div class="space-y-4 max-w-md mb-8">
+                <select id="interest" class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/30 focus:border-purple-500 bg-gray-50 font-semibold">
+                    <option value="">Choose your specialization...</option>
+                    <option value="software engineer">💻 Software Engineering</option>
+                    <option value="data analyst">📊 Data Science / Analytics</option>
+                    <option value="ux designer">🎨 Product Design (UI/UX)</option>
+                    <option value="product manager">📈 Product Management</option>
+                    <option value="digital marketer">📱 Digital Marketing</option>
+                </select>
+                <button onclick="searchJobs()" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white py-4 rounded-xl font-bold shadow-lg shadow-purple-500/30 transition-all transform hover:scale-105">
+                    🔍 Search on LinkedIn Jobs
+                </button>
+            </div>
+            <div id="jobResultContainer" class="hidden p-6 bg-blue-50 border-2 border-blue-200 rounded-xl">
+                <p id="jobResult" class="text-blue-800 font-semibold mb-3"></p>
+                <a id="linkedinLink" href="#" target="_blank" class="inline-block text-blue-600 hover:text-blue-700 font-semibold underline">Open LinkedIn Jobs →</a>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section hidden">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900" style="font-family: 'Playfair Display', serif;">📄 Resume Builder</h2>
+            <p class="text-gray-700 mb-8 text-lg">Create professional resumes using these trusted platforms:</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-8 rounded-2xl shadow-lg hover:shadow-xl">
+                    <span class="text-5xl mb-4 block">🎨</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Canva Resume Builder</h3>
+                    <p class="text-gray-700 mb-6">Design modern resumes using beautiful ready-made templates.</p>
+                    <a href="https://www.canva.com/resumes/" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">Create Resume →</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl shadow-lg hover:shadow-xl">
+                    <span class="text-5xl mb-4 block">📝</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Microsoft Resume Templates</h3>
+                    <p class="text-gray-700 mb-6">Build professional resumes using Word templates from Microsoft Office.</p>
+                    <a href="https://templates.office.com/en-us/resumes-and-cover-letters" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">Open Templates →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mock Interview Section -->
+        <section id="mock" class="section hidden">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900" style="font-family: 'Playfair Display', serif;">🎤 Mock Interviews & Tests</h2>
+            <p class="text-gray-700 mb-8 text-lg">Practice interviews and tests to improve your confidence and skills:</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-8 rounded-2xl shadow-lg border-l-4 border-yellow-500 hover:shadow-xl">
+                    <span class="text-5xl mb-4 block">⚡</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Unstop Mock Tests</h3>
+                    <p class="text-gray-700 mb-6">AI-powered role-based mock tests for technical interviews.</p>
+                    <a href="https://unstop.com/practice/ai-powered-role-based-mock-tests" target="_blank" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white px-5 py-2 rounded-lg font-semibold transition-all">Take Test →</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl shadow-lg border-l-4 border-blue-500 hover:shadow-xl">
+                    <span class="text-5xl mb-4 block">💬</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Pramp</h3>
+                    <p class="text-gray-700 mb-6">Peer-to-peer technical mock interviews with real engineers.</p>
+                    <a href="https://www.pramp.com" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold transition-all">Start Practice →</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl shadow-lg border-l-4 border-green-500 hover:shadow-xl">
+                    <span class="text-5xl mb-4 block">🤖</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Interviewing.io</h3>
+                    <p class="text-gray-700 mb-6">Practice with real engineers anonymously and get feedback.</p>
+                    <a href="https://interviewing.io" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg font-semibold transition-all">Join Now →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section hidden glass-card p-8 md:p-12 rounded-2xl shadow-lg">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900" style="font-family: 'Playfair Display', serif;">💌 Get In Touch</h2>
+            <div class="max-w-2xl">
+                <form onsubmit="sendMessage(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" placeholder="Your name" class="w-full p-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/30 focus:border-purple-500 bg-gray-50" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com" class="w-full p-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/30 focus:border-purple-500 bg-gray-50" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                        <textarea id="message" placeholder="Your message..." class="w-full p-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/30 focus:border-purple-500 bg-gray-50 resize-none" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-purple-500/30 transition-all transform hover:scale-105">
+                        📤 Send Message
+                    </button>
+                </form>
+                <p id="status" class="mt-4 text-green-600 font-bold text-center"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back Button -->
+    <div class="text-center mt-12 mb-8">
+        <a href="{% url 'dashboard' %}" class="inline-block text-purple-600 hover:text-purple-700 font-semibold">← Back to Dashboard</a>
+    </div>
+
+    <script>
+        // Navigation Logic
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+            
+            // Update nav button states
+            document.querySelectorAll('.nav-link').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Job Search Logic
+        function searchJobs() {
+            let skill = document.getElementById("interest").value;
+            let container = document.getElementById("jobResultContainer");
+            let resultText = document.getElementById("jobResult");
+            let link = document.getElementById("linkedinLink");
+
+            if (!skill) {
+                alert("Please select a skill first!");
+                return;
+            }
+
+            container.classList.remove("hidden");
+            let linkedinURL = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(skill)}&f_E=2%2C3`;
+            
+            resultText.innerText = `🎉 Found opportunities for "${skill.toUpperCase()}" on LinkedIn! Click below to explore job listings.`;
+            link.href = linkedinURL;
+        }
+
+        // Contact Logic
+        function sendMessage(e) {
+            e.preventDefault();
+            document.getElementById("status").innerText = "✅ Success! We'll reach out to you soon.";
+            e.target.reset();
+            setTimeout(() => {
+                document.getElementById("status").innerText = "";
+            }, 3000);
+        }
+
+        // Set home as default
+        showSection('home');
+    </script>
+
+</body>
+</html>
