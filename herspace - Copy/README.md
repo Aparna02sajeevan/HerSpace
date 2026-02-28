@@ -1,4 +1,4 @@
-<img width="1920" height="1020" alt="Screenshot 2026-02-28 101904" src="https://github.com/user-attachments/assets/3adbf007-3656-4b05-abd3-f2768bd21e3c" /><img width="1920" height="1020" alt="landingpage2" src="https://github.com/user-attachments/assets/fc410013-fa6d-4d03-9f7b-bcdf704e00e0" /># HerSpace 🌸
+># HerSpace 🌸
 
 A comprehensive women's wellness and mental health platform designed to empower women through mood tracking, journaling, financial management, career development, and mindfulness activities.
 
@@ -646,6 +646,8 @@ This video showcases all key features of the HerSpace platform in action.
 ### Platform Features Gallery
 
 Here are screenshots showcasing HerSpace's key features:
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 101904" src="https://github.com/user-attachments/assets/3adbf007-3656-4b05-abd3-f2768bd21e3c" />
+<img width="1920" height="1020" alt="landingpage2" src="https://github.com/user-attachments/assets/fc410013-fa6d-4d03-9f7b-bcdf704e00e0" />
 <img width="1920" height="1020" alt="Screenshot 2026-02-28 101846" src="https://github.com/user-attachments/assets/dcbb3056-b78c-4adc-8e3a-f94095be82d0" />
 <img width="1920" height="1020" alt="Screenshot 2026-02-28 101904" src="https://github.com/user-attachments/assets/bf7ff9b7-0a90-4de2-8a0b-ac987cbb034a" />
 <img width="1920" height="1020" alt="Screenshot 2026-02-28 101945" src="https://github.com/user-attachments/assets/ce8ba029-31d6-4335-b1b9-fb05090bcece" />
@@ -665,6 +667,9 @@ Here are screenshots showcasing HerSpace's key features:
 
 <img width="1920" height="1020" alt="Screenshot 2026-02-28 102019" src="https://github.com/user-attachments/assets/97b22d37-87d0-4fb7-8086-f71663d53037" />
 <img width="1920" height="1020" alt="Screenshot 2026-02-28 102610" src="https://github.com/user-attachments/assets/322b2120-d629-40e6-9e07-d52ac340be51" />
+
+##Diagrams
+![dua](https://github.com/user-attachments/assets/88d72c3c-51d2-4894-aba4-78cb6105641b)
 
 
 
@@ -691,6 +696,7 @@ Made with ❤️ by **Innovix** at **College of Engineering Thalassery**
 **Version:** 1.0.0
 
 *For the latest updates, documentation, and contributions, visit our [GitHub Repository](https://github.com/yourusername/herspace)*
+
 
 
 
