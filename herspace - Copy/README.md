@@ -668,7 +668,8 @@ Here are screenshots showcasing HerSpace's key features:
 <img width="1920" height="1020" alt="Screenshot 2026-02-28 102019" src="https://github.com/user-attachments/assets/97b22d37-87d0-4fb7-8086-f71663d53037" />
 <img width="1920" height="1020" alt="Screenshot 2026-02-28 102610" src="https://github.com/user-attachments/assets/322b2120-d629-40e6-9e07-d52ac340be51" />
 
-##Diagrams
+## Diagrams
+
 ![dua](https://github.com/user-attachments/assets/88d72c3c-51d2-4894-aba4-78cb6105641b)
 
 
@@ -696,6 +697,7 @@ Made with ❤️ by **Innovix** at **College of Engineering Thalassery**
 **Version:** 1.0.0
 
 *For the latest updates, documentation, and contributions, visit our [GitHub Repository](https://github.com/yourusername/herspace)*
+
 
 
 
