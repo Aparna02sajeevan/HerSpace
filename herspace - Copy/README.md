@@ -1,4 +1,4 @@
-# HerSpace 🌸
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 101904" src="https://github.com/user-attachments/assets/3adbf007-3656-4b05-abd3-f2768bd21e3c" /><img width="1920" height="1020" alt="landingpage2" src="https://github.com/user-attachments/assets/fc410013-fa6d-4d03-9f7b-bcdf704e00e0" /># HerSpace 🌸
 
 A comprehensive women's wellness and mental health platform designed to empower women through mood tracking, journaling, financial management, career development, and mindfulness activities.
 
@@ -648,10 +648,9 @@ This video showcases all key features of the HerSpace platform in action.
 Here are screenshots showcasing HerSpace's key features:
 
 #### Landing & Authentication
-![Landing Page]![Uploading landingpage2.png…]()
 
-![Login Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101820.png)
-- [Sign Up Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101846.png)
+<img width="1920" height="1020" alt="landingpage2" src="https://github.com/user-attachments/assets/913c5e94-af58-4021-b6d0-426e7e37eb2e" />
+
 
 #### Dashboard & Mood Tracking
 - [Main Dashboard](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101904.png)
@@ -700,6 +699,7 @@ Made with ❤️ by **Innovix** at **College of Engineering Thalassery**
 **Version:** 1.0.0
 
 *For the latest updates, documentation, and contributions, visit our [GitHub Repository](https://github.com/yourusername/herspace)*
+
 
 
 
