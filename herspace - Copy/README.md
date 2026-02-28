@@ -648,8 +648,8 @@ This video showcases all key features of the HerSpace platform in action.
 Here are screenshots showcasing HerSpace's key features:
 
 #### Landing & Authentication
-- ![Landing Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101808.png)
-- ![Login Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101820.png)
+![Landing Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101808.png)
+![Login Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101820.png)
 - [Sign Up Page](../OneDrive/Pictures/Screenshots/screenshoots/Screenshot%202026-02-28%20101846.png)
 
 #### Dashboard & Mood Tracking
@@ -699,4 +699,5 @@ Made with ❤️ by **Innovix** at **College of Engineering Thalassery**
 **Version:** 1.0.0
 
 *For the latest updates, documentation, and contributions, visit our [GitHub Repository](https://github.com/yourusername/herspace)*
+
 
